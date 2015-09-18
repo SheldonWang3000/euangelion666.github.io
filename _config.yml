@@ -6,10 +6,8 @@ baseurl: ""
 url: "http://euangelion666.github.io"
 title_description: ""
 title_image: "http://i601.photobucket.com/albums/tt92/naozhong/1.jpg?t=1442491715"
-google_analytics: "UA-20365477-4"
-disqus_account: cartenoire
-github_repository: https://github.com/jacobtomlinson/carte-noire
-addthis_id: ra-513c6fa83da6ec67
+google_analytics: "UA-67802592-1"
+disqus_account: euangelion666
 post_limit: 10
 
 # Social usernames/URLs
@@ -24,8 +22,8 @@ footer_left: "Made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitt
 footer_right: "&lt;/&gt; on <a href=\"https://github.com/jacobtomlinson/carte-noire\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
 permalink: pretty
-exclude: [vendor]
+# exclude: [vendor]

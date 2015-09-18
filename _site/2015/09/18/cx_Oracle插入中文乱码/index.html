@@ -1,0 +1,22 @@
+<h1>cx_Oracle插入中文乱码</h1>
+
+<p>标签（空格分隔）： Python3 Oracle</p>
+
+<hr>
+
+<p>需要同时设置Python中NLS_LANG的值，和bash中oracle的NLS
+_LANG的值</p>
+
+<p>Python
+<code>Python
+import os
+os.environ[&#39;NLS_LANG&#39;] = &#39;SIMPLIFIED CHINESE_CHINA.UTF8&#39;  
+</code></p>
+
+<p>Bash
+<code>bash
+cd /home/oracle/ #这里要进入oracle用户的目录下
+vi .bash_profile
+    插入NLS_LANG=&quot;SIMPLIFIED CHINESE_CHINA.UTF8&quot;;export NLS_LANG
+source .bash_profile
+</code></p>

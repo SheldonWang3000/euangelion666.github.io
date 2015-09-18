@@ -1,0 +1,44 @@
+<hr>
+
+<p>layout:     post
+title:      CentOS上安装Python3的方法
+date:       2015-09-18 21:28:02
+summary:    CentOS上安装Python3的方法
+categories: jekyll
+thumbnail: jekyll
+tags:</p>
+
+<h2> - CentOS</h2>
+
+<h1>CentOS上安装Python3的方法</h1>
+
+<p>标签（空格分隔）： CentOS</p>
+
+<hr>
+
+<h3>1.编译安装</h3>
+
+<ul>
+<li>依赖包安装
+<code>bash
+yum groupinstall development  
+yum install openssl-devel sqlite-devel bzip2-devel gdbm-devel
+ncurses-devel xz-devel readline-devel  
+</code></li>
+<li>下载编译包 <a href="https://www.python.org/downloads/">Python编译包下载地址</a></li>
+<li>解压，进入文件夹</li>
+<li><p>编译安装<a href="%E8%BF%99%E9%87%8C%E9%81%87%E4%B8%8A%E8%BF%87%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AFmake%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E6%98%AF%E7%9F%AB%E6%AD%A3%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4"><sup>footnote</sup></a>
+<code>bash
+./configure --prefix=/安装位置
+make
+make install
+</code></p></li>
+<li><p>配置命令<a href="%E8%BF%99%E9%87%8C%E6%B3%A8%E6%84%8F%E6%98%AF%E5%90%A6%E6%9C%89%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%89%E6%B3%A8%E6%84%8F%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E8%A6%86%E7%9B%96"><sup>footnote2</sup></a>
+<code>bash
+ln -s /安装目录/bin/python3 /usr/bin/python3  
+</code></p></li>
+</ul>
+
+<h3>2. yum安装</h3>
+
+<p>未完待续</p>

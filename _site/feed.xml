@@ -5,9 +5,256 @@
     <description>Coding Zone</description>
     <link>http://euangelion666.github.io/</link>
     <atom:link href="http://euangelion666.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 18 Sep 2015 21:00:10 +0800</pubDate>
-    <lastBuildDate>Fri, 18 Sep 2015 21:00:10 +0800</lastBuildDate>
+    <pubDate>Fri, 18 Sep 2015 22:12:16 +0800</pubDate>
+    <lastBuildDate>Fri, 18 Sep 2015 22:12:16 +0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>CentOS上安装Python3的方法</title>
+        <description>&lt;h3&gt;1.编译安装&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;依赖包安装&lt;/p&gt;
+
+&lt;p&gt;yum groupinstall development 
+yum install openssl-devel sqlite-devel bzip2-devel gdbm-devel
+ncurses-devel xz-devel readline-devel  &lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下载编译包 &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python编译包下载地址&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;解压，进入文件夹&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译安装&lt;a href=&quot;%E8%BF%99%E9%87%8C%E9%81%87%E4%B8%8A%E8%BF%87%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AFmake%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E6%98%AF%E7%9F%AB%E6%AD%A3%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4&quot;&gt;&lt;sup&gt;footnote&lt;/sup&gt;&lt;/a&gt;
+&lt;code&gt;bash
+./configure --prefix=/安装位置
+make
+make install
+&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置命令&lt;a href=&quot;%E8%BF%99%E9%87%8C%E6%B3%A8%E6%84%8F%E6%98%AF%E5%90%A6%E6%9C%89%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%89%E6%B3%A8%E6%84%8F%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E8%A6%86%E7%9B%96&quot;&gt;&lt;sup&gt;footnote2&lt;/sup&gt;&lt;/a&gt;
+&lt;code&gt;bash
+ln -s /安装目录/bin/python3 /usr/bin/python3  
+&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. yum安装&lt;/h3&gt;
+
+&lt;p&gt;未完待续&lt;/p&gt;
+</description>
+        <pubDate>Sat, 19 Sep 2015 05:28:02 +0800</pubDate>
+        <link>http://euangelion666.github.io/jekyll/2015/09/19/1/</link>
+        <guid isPermaLink="true">http://euangelion666.github.io/jekyll/2015/09/19/1/</guid>
+        
+        <category>CentOS</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Yum下对应libcurl4 Openssl Dev包</title>
+        <description>&lt;h1&gt;yum下对应libcurl4-openssl-dev包&lt;/h1&gt;
+
+&lt;p&gt;标签（空格分隔）： CentOS&lt;/p&gt;
+
+&lt;hr&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo yum install libcurl-devel openssl-devel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;这里是在yum系的系统上安装pycurl所需要的底层包&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://euangelion666.github.io/2015/09/18/yum%E4%B8%8B%E5%AF%B9%E5%BA%94libcurl4-openssl-dev%E5%8C%85/</link>
+        <guid isPermaLink="true">http://euangelion666.github.io/2015/09/18/yum%E4%B8%8B%E5%AF%B9%E5%BA%94libcurl4-openssl-dev%E5%8C%85/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pycurl安装</title>
+        <description>&lt;h1&gt;pycurl安装&lt;/h1&gt;
+
+&lt;p&gt;标签（空格分隔）： Python3&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;pip可以直接安装，但是安装之后import可能会出现一下报错
+&lt;code&gt;Python
+ImportError: pycurl: libcurl link-time ssl backend (openssl) is different from compile-time ssl backend (none/other)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;解决方法是：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;卸载pycurl
+&lt;code&gt;bash
+pip uninstall pycurl
+&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;在bash或你所使用的终端中，设置pycurl的ssl库
+```bash
+export PYCURL_SSL_LIBRARY=openssl&lt;/p&gt;
+
+&lt;h1&gt;这里值与报错中的显示有关&lt;/h1&gt;
+
+&lt;h1&gt;libcurl link-time ssl backend (openssl)&lt;/h1&gt;
+
+&lt;h1&gt;设置PYCURL_SSL_LIBRARY的值与上面括号中的值一致&lt;/h1&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;再次安装pycurl
+&lt;code&gt;bash
+pip install pycurl
+&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Fri, 18 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://euangelion666.github.io/2015/09/18/pycurl%E5%AE%89%E8%A3%85/</link>
+        <guid isPermaLink="true">http://euangelion666.github.io/2015/09/18/pycurl%E5%AE%89%E8%A3%85/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Cx_oracle插入中文乱码</title>
+        <description>&lt;h1&gt;cx_Oracle插入中文乱码&lt;/h1&gt;
+
+&lt;p&gt;标签（空格分隔）： Python3 Oracle&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;需要同时设置Python中NLS_LANG的值，和bash中oracle的NLS
+_LANG的值&lt;/p&gt;
+
+&lt;p&gt;Python
+&lt;code&gt;Python
+import os
+os.environ[&amp;#39;NLS_LANG&amp;#39;] = &amp;#39;SIMPLIFIED CHINESE_CHINA.UTF8&amp;#39;  
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bash
+&lt;code&gt;bash
+cd /home/oracle/ #这里要进入oracle用户的目录下
+vi .bash_profile
+    插入NLS_LANG=&amp;quot;SIMPLIFIED CHINESE_CHINA.UTF8&amp;quot;;export NLS_LANG
+source .bash_profile
+&lt;/code&gt;&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://euangelion666.github.io/2015/09/18/cx_Oracle%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</link>
+        <guid isPermaLink="true">http://euangelion666.github.io/2015/09/18/cx_Oracle%E6%8F%92%E5%85%A5%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Pyspider中经过phantomjs造成乱码</title>
+        <description>&lt;h1&gt;Pyspider中经过PhantomJS造成乱码&lt;/h1&gt;
+
+&lt;p&gt;标签（空格分隔）： Pyspider&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;p&gt;在crawl时设置fetch_type=&amp;#39;js&amp;#39;，使得网页通过PhantomJS运行js语句，但是有的页面会出现乱码的情况，这里可能会与headers的设置有关，传入一个空headers可能会有所帮助，如果必须要传入headers，可能需要不断尝试找到最合适的参数&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://euangelion666.github.io/2015/09/18/Pyspider%E4%B8%AD%E7%BB%8F%E8%BF%87PhantomJS%E9%80%A0%E6%88%90%E4%B9%B1%E7%A0%81/</link>
+        <guid isPermaLink="true">http://euangelion666.github.io/2015/09/18/Pyspider%E4%B8%AD%E7%BB%8F%E8%BF%87PhantomJS%E9%80%A0%E6%88%90%E4%B9%B1%E7%A0%81/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Phantomjs安装</title>
+        <description>&lt;h1&gt;PhantomJS安装&lt;/h1&gt;
+
+&lt;p&gt;标签（空格分隔）： PhantomJS&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;1.下载包&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.8-linux-x86_64.tar.bz2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2.解压&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;tar jxf phantomjs-1.9.8-linux-x86_64.tar.bz2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;3.创建链接&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ln -s phantomjs-1.9.8-linux-x86_64/bin phantomjs
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Fri, 18 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://euangelion666.github.io/2015/09/18/PhantomJS%E5%AE%89%E8%A3%85/</link>
+        <guid isPermaLink="true">http://euangelion666.github.io/2015/09/18/PhantomJS%E5%AE%89%E8%A3%85/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Centos中安装lxml</title>
+        <description>&lt;h1&gt;CentOS中安装lxml&lt;/h1&gt;
+
+&lt;p&gt;标签（空格分隔）： CentOS Python3&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;1.依赖安装&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yum install libxslt-devel libxml2-devel
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;2.安装&lt;/h3&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pip install lxml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Fri, 18 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://euangelion666.github.io/2015/09/18/CentOS%E4%B8%AD%E5%AE%89%E8%A3%85lxml/</link>
+        <guid isPermaLink="true">http://euangelion666.github.io/2015/09/18/CentOS%E4%B8%AD%E5%AE%89%E8%A3%85lxml/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Centos上安装python3的方法</title>
+        <description>&lt;hr&gt;
+
+&lt;p&gt;layout:     post
+title:      CentOS上安装Python3的方法
+date:       2015-09-18 21:28:02
+summary:    CentOS上安装Python3的方法
+categories: jekyll
+thumbnail: jekyll
+tags:&lt;/p&gt;
+
+&lt;h2&gt; - CentOS&lt;/h2&gt;
+
+&lt;h1&gt;CentOS上安装Python3的方法&lt;/h1&gt;
+
+&lt;p&gt;标签（空格分隔）： CentOS&lt;/p&gt;
+
+&lt;hr&gt;
+
+&lt;h3&gt;1.编译安装&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;依赖包安装
+&lt;code&gt;bash
+yum groupinstall development  
+yum install openssl-devel sqlite-devel bzip2-devel gdbm-devel
+ncurses-devel xz-devel readline-devel  
+&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;下载编译包 &lt;a href=&quot;https://www.python.org/downloads/&quot;&gt;Python编译包下载地址&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;解压，进入文件夹&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;编译安装&lt;a href=&quot;%E8%BF%99%E9%87%8C%E9%81%87%E4%B8%8A%E8%BF%87%E6%97%A0%E9%99%90%E5%BE%AA%E7%8E%AFmake%E7%9A%84%E6%83%85%E5%86%B5%EF%BC%8C%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E6%98%AF%E7%9F%AB%E6%AD%A3%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4&quot;&gt;&lt;sup&gt;footnote&lt;/sup&gt;&lt;/a&gt;
+&lt;code&gt;bash
+./configure --prefix=/安装位置
+make
+make install
+&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;配置命令&lt;a href=&quot;%E8%BF%99%E9%87%8C%E6%B3%A8%E6%84%8F%E6%98%AF%E5%90%A6%E6%9C%89%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E7%9A%84%E5%91%BD%E4%BB%A4%EF%BC%8C%E5%A6%82%E6%9E%9C%E6%9C%89%E6%B3%A8%E6%84%8F%E5%8D%83%E4%B8%87%E4%B8%8D%E8%A6%81%E8%A6%86%E7%9B%96&quot;&gt;&lt;sup&gt;footnote2&lt;/sup&gt;&lt;/a&gt;
+&lt;code&gt;bash
+ln -s /安装目录/bin/python3 /usr/bin/python3  
+&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;2. yum安装&lt;/h3&gt;
+
+&lt;p&gt;未完待续&lt;/p&gt;
+</description>
+        <pubDate>Fri, 18 Sep 2015 00:00:00 +0800</pubDate>
+        <link>http://euangelion666.github.io/2015/09/18/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85Python3%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+        <guid isPermaLink="true">http://euangelion666.github.io/2015/09/18/CentOS%E4%B8%8A%E5%AE%89%E8%A3%85Python3%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+        
+        
+      </item>
     
   </channel>
 </rss>
