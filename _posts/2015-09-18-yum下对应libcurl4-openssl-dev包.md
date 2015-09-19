@@ -9,10 +9,12 @@ tags:
  - CentOS
 ---
 
+这里是在yum系的系统上安装pycurl所需要的底层包
+
 ```bash
 sudo yum install libcurl-devel openssl-devel
 ```
-这里是在yum系的系统上安装pycurl所需要的底层包
+
 
 
 
