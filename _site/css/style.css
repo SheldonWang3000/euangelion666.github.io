@@ -257,9 +257,7 @@ ul {
       .all-posts .content-panel {
         padding-left: 30px;
         padding-right: 30px; } }
-.footnotes{
-  font-size: 14px;
-}
+
 .single {
   height: 100%;
   max-height: 100%; }
@@ -274,7 +272,7 @@ ul {
     margin-bottom: 10px; }
     @media (min-width: 768px) {
       .single p {
-        margin-bottom: 0px; } }
+        margin-bottom: 40px; } }
   .single .menu {
     background-color: #215A6D; }
     .single .menu a, .single .menu a:active {
