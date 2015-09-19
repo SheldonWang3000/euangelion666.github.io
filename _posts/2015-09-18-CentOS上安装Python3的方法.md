@@ -1,13 +1,13 @@
 ﻿---
 layout:     post
-title:      CentOS上安装Python3的方法
-date:       2015-09-18 21:28:02
-summary:    CentOS上安装Python3的方法
+title:      CentOS上安装Python3
+date:       2014-06-09 12:32:18
+summary:    CentOS下安装Python3的方法
 categories: jekyll
 thumbnail: jekyll
 tags:
- - CentOS
- - Python3
+ - about
+ - jekyll
 ---
 
 Hello
