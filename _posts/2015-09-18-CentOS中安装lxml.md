@@ -8,6 +8,7 @@ thumbnail: jekyll
 tags:
  - CentOS
 ---
+
 ### 1.依赖安装
 
 ```bash
