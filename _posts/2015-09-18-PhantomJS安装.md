@@ -1,7 +1,12 @@
-﻿# PhantomJS安装
-
-标签（空格分隔）： PhantomJS
-
+﻿---
+layout:     post
+title:		PhantomJS安装	
+date:       2015-09-18 21:28:02
+summary:    PhantomJS安装	
+categories: jekyll
+thumbnail: jekyll
+tags:
+ - PhantomJS
 ---
 
 
