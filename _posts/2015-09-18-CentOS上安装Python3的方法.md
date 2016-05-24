@@ -9,7 +9,7 @@ tags:
  - CentOS
 ---
 
-### 1.编译安装
+### 编译安装
 + 依赖包安装
 
 ```bash
@@ -34,6 +34,3 @@ make install
 ln -s /安装目录/bin/python3 /usr/bin/python3  
 ```
 [^2]: 这里注意是否有系统自带的命令，如果有注意千万不要覆盖
-
-### 2. yum安装
-未完待续
