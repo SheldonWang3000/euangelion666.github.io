@@ -177,15 +177,17 @@ ul {
   .index .links {
     font-size: 2em; }
   .index .articles {
-    text-align: center;
     font-size: 20px; }
     .index .articles h2 {
+      text-align: center;
       margin-bottom: 30px;
       color: #3CA2A2;
       font-size: 26px; }
     .index .articles ul {
       padding: 0px; }
       .index .articles ul li {
+        text-align: left;
+        margin-left: 20px;
         margin-bottom: 20px;
         font-size: 24px; }
         .index .articles ul li a:hover {
