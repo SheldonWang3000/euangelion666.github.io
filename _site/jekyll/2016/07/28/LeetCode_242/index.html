@@ -102,35 +102,35 @@
 
         
 
-        <span itemprop="articleBody"><p>题目：判断2个字符串是否互为字母移位之后的结果</p>
+        <span itemprop="articleBody"><p>题目：判断suojin2个字符串是否互为字母移位之后的结果</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>bool isAnagram(string s, string t)
 {
-	if (s.size() != t.size()) return false;
-	map&lt;char, int&gt; mapS, mapT;
-	for (auto i : s)
-	{
-		mapS[i] += 1;
-	}
-	for (auto i : t)
-	{
-		mapT[i] += 1;
-	}
-	if (mapS.size() != mapT.size()) return false;
-	vector&lt;pair&lt;char, int&gt;&gt; tmpS(mapS.begin(), mapS.end());
-	vector&lt;pair&lt;char, int&gt;&gt; tmpT(mapT.begin(), mapT.end());
-	sort(tmpS.begin(), tmpS.end());
-	sort(tmpT.begin(), tmpT.end());
-	auto iterS = mapS.begin();
-	auto iterT = mapT.begin();
-	while (iterS != mapS.end() &amp;&amp; iterT != mapT.end())
-	{
-		if (iterS-&gt;first != iterT-&gt;first) return false;
-		if (iterS-&gt;second != iterT-&gt;second) return false;
-		++iterS;
-		++iterT;
-	}
-	return true;
+    if (s.size() != t.size()) return false;
+    map&lt;char, int&gt; mapS, mapT;
+    for (auto i : s)
+    {
+        mapS[i] += 1;
+    }
+    for (auto i : t)
+    {
+        mapT[i] += 1;
+    }
+    if (mapS.size() != mapT.size()) return false;
+    vector&lt;pair&lt;char, int&gt;&gt; tmpS(mapS.begin(), mapS.end());
+    vector&lt;pair&lt;char, int&gt;&gt; tmpT(mapT.begin(), mapT.end());
+    sort(tmpS.begin(), tmpS.end());
+    sort(tmpT.begin(), tmpT.end());
+    auto iterS = mapS.begin();
+    auto iterT = mapT.begin();
+    while (iterS != mapS.end() &amp;&amp; iterT != mapT.end())
+    {
+        if (iterS-&gt;first != iterT-&gt;first) return false;
+        if (iterS-&gt;second != iterT-&gt;second) return false;
+        ++iterS;
+        ++iterT;
+    }
+    return true;
 }
 </code></pre>
 </div>
