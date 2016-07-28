@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PySpider中经过PhantomJS造成乱码</title>
+<title>pycurl安装</title>
 <meta name="description" content="Coding Zone">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -82,12 +82,12 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">PySpider中经过PhantomJS造成乱码</h1>
+      <h1 class="header" itemprop="name">pycurl安装</h1>
 
       <div class="author">
         <small><i>
           
-          on <span itemprop="datePublished" content="2014-08-28">September 19, 2015</span>
+          on <span itemprop="datePublished" content="2014-08-28">September 18, 2015</span>
            under jekyll
         </i></small>
       </div>
@@ -102,8 +102,39 @@
 
         
 
-        <span itemprop="articleBody"><p>在crawl时设置fetch_type=’js’，使得网页通过PhantomJS运行js语句，但是有的页面会出现乱码的情况，这里可能会与headers的设置有关，传入一个空headers可能会有所帮助，如果必须要传入headers，可能需要不断尝试找到最合适的参数</p>
+        <span itemprop="articleBody"><p>pip可以直接安装，但是安装之后import可能会出现一下报错</p>
 
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="nb">ImportError</span><span class="p">:</span> <span class="n">pycurl</span><span class="p">:</span> <span class="n">libcurl</span> <span class="n">link</span><span class="o">-</span><span class="n">time</span> <span class="n">ssl</span> <span class="n">backend</span> <span class="p">(</span><span class="n">openssl</span><span class="p">)</span> <span class="ow">is</span> <span class="n">different</span> <span class="kn">from</span> <span class="nn">compile</span><span class="err">-</span><span class="nn">time</span> <span class="nn">ssl</span> <span class="nn">backend</span> <span class="err">(</span><span class="nn">none</span><span class="err">/</span><span class="nn">other</span><span class="err">)
+</span></code></pre>
+</div>
+
+<p>解决方法是：</p>
+
+<ul>
+  <li>卸载pycurl</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip uninstall pycurl
+</code></pre>
+</div>
+
+<ul>
+  <li>在bash或你所使用的终端中，设置pycurl的ssl库</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">export </span><span class="nv">PYCURL_SSL_LIBRARY</span><span class="o">=</span>openssl
+<span class="c"># 这里值与报错中的显示有关</span>
+<span class="c"># libcurl link-time ssl backend (openssl)</span>
+<span class="c"># 设置PYCURL_SSL_LIBRARY的值与上面括号中的值一致</span>
+</code></pre>
+</div>
+<ul>
+  <li>再次安装pycurl</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>pip install pycurl
+</code></pre>
+</div>
 </span>
 
         
@@ -114,7 +145,7 @@
         <div class="tags">
           <small>
           <i class="fa fa-tags"></i>
-            Pyspider
+            CentOS
           </small>
         </div>
         

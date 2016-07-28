@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:	    Python下的Global变量
-date:       2016-05-24 10:17:02
+date:       2016-05-24 10:17:02 +08:00
 summary:    Global变量的基本用法
 categories: jekyll
 thumbnail: jekyll

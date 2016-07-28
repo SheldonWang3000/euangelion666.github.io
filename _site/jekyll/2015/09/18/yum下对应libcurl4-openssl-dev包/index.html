@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PySpider中经过PhantomJS造成乱码</title>
+<title>yum下对应libcurl4-openssl-dev包</title>
 <meta name="description" content="Coding Zone">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -82,12 +82,12 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">PySpider中经过PhantomJS造成乱码</h1>
+      <h1 class="header" itemprop="name">yum下对应libcurl4-openssl-dev包</h1>
 
       <div class="author">
         <small><i>
           
-          on <span itemprop="datePublished" content="2014-08-28">September 19, 2015</span>
+          on <span itemprop="datePublished" content="2014-08-28">September 18, 2015</span>
            under jekyll
         </i></small>
       </div>
@@ -102,8 +102,11 @@
 
         
 
-        <span itemprop="articleBody"><p>在crawl时设置fetch_type=’js’，使得网页通过PhantomJS运行js语句，但是有的页面会出现乱码的情况，这里可能会与headers的设置有关，传入一个空headers可能会有所帮助，如果必须要传入headers，可能需要不断尝试找到最合适的参数</p>
+        <span itemprop="articleBody"><p>这里是在yum系的系统上安装pycurl所需要的底层包</p>
 
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>sudo yum install libcurl-devel openssl-devel
+</code></pre>
+</div>
 </span>
 
         
@@ -114,7 +117,7 @@
         <div class="tags">
           <small>
           <i class="fa fa-tags"></i>
-            Pyspider
+            CentOS
           </small>
         </div>
         

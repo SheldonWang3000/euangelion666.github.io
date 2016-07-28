@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PySpider中经过PhantomJS造成乱码</title>
+<title>cx_Oracle插入中文乱码</title>
 <meta name="description" content="Coding Zone">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -82,12 +82,12 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">PySpider中经过PhantomJS造成乱码</h1>
+      <h1 class="header" itemprop="name">cx_Oracle插入中文乱码</h1>
 
       <div class="author">
         <small><i>
           
-          on <span itemprop="datePublished" content="2014-08-28">September 19, 2015</span>
+          on <span itemprop="datePublished" content="2014-08-28">September 18, 2015</span>
            under jekyll
         </i></small>
       </div>
@@ -102,8 +102,23 @@
 
         
 
-        <span itemprop="articleBody"><p>在crawl时设置fetch_type=’js’，使得网页通过PhantomJS运行js语句，但是有的页面会出现乱码的情况，这里可能会与headers的设置有关，传入一个空headers可能会有所帮助，如果必须要传入headers，可能需要不断尝试找到最合适的参数</p>
+        <span itemprop="articleBody"><p>需要同时设置Python中NLS_LANG的值，和bash中oracle的NLS_LANG的值</p>
 
+<p>Python</p>
+
+<div class="language-python highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'NLS_LANG'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'SIMPLIFIED CHINESE_CHINA.UTF8'</span>  
+</code></pre>
+</div>
+
+<p>Bash</p>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="nb">cd</span> /home/oracle/ <span class="c">#这里要进入oracle用户的目录下</span>
+vi .bash_profile
+    插入NLS_LANG<span class="o">=</span><span class="s2">"SIMPLIFIED CHINESE_CHINA.UTF8"</span>;<span class="nb">export </span>NLS_LANG
+<span class="nb">source</span> .bash_profile
+</code></pre>
+</div>
 </span>
 
         
@@ -114,7 +129,7 @@
         <div class="tags">
           <small>
           <i class="fa fa-tags"></i>
-            Pyspider
+            Python, Oracle
           </small>
         </div>
         

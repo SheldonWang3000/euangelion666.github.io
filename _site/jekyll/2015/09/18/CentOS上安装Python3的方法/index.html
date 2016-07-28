@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PySpider中经过PhantomJS造成乱码</title>
+<title>CentOS上安装Python3的方法</title>
 <meta name="description" content="Coding Zone">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -82,12 +82,12 @@
       </div>
       
 
-      <h1 class="header" itemprop="name">PySpider中经过PhantomJS造成乱码</h1>
+      <h1 class="header" itemprop="name">CentOS上安装Python3的方法</h1>
 
       <div class="author">
         <small><i>
           
-          on <span itemprop="datePublished" content="2014-08-28">September 19, 2015</span>
+          on <span itemprop="datePublished" content="2014-08-28">September 18, 2015</span>
            under jekyll
         </i></small>
       </div>
@@ -102,8 +102,45 @@
 
         
 
-        <span itemprop="articleBody"><p>在crawl时设置fetch_type=’js’，使得网页通过PhantomJS运行js语句，但是有的页面会出现乱码的情况，这里可能会与headers的设置有关，传入一个空headers可能会有所帮助，如果必须要传入headers，可能需要不断尝试找到最合适的参数</p>
+        <span itemprop="articleBody"><h3 id="section">编译安装</h3>
+<ul>
+  <li>依赖包安装</li>
+</ul>
 
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>yum groupinstall development  
+yum install openssl-devel sqlite-devel bzip2-devel gdbm-devel
+ncurses-devel xz-devel readline-devel  
+</code></pre>
+</div>
+<ul>
+  <li>下载编译包 <a href="https://www.python.org/downloads/">Python编译包下载地址</a></li>
+  <li>解压，进入文件夹</li>
+  <li>编译安装<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>./configure --prefix<span class="o">=</span>/安装位置
+make
+make install
+</code></pre>
+</div>
+
+<ul>
+  <li>配置命令<sup id="fnref:2"><a href="#fn:2" class="footnote">2</a></sup></li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>ln -s /安装目录/bin/python3 /usr/bin/python3  
+</code></pre>
+</div>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>这里遇上过无限循环make的情况，解决方法是矫正系统时间 <a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>这里注意是否有系统自带的命令，如果有注意千万不要覆盖 <a href="#fnref:2" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 </span>
 
         
@@ -114,7 +151,7 @@
         <div class="tags">
           <small>
           <i class="fa fa-tags"></i>
-            Pyspider
+            CentOS
           </small>
         </div>
         

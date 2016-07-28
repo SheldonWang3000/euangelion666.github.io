@@ -9,7 +9,7 @@ if not os.path.exists(filename):
         f.write('---\n')
         f.write('layout: post\n')
         f.write('title: ' + title + '\n')
-        f.write('date: ' + time.strftime("%Y-%m-%d %H:%M:%S") + '\n')
+        f.write('date: ' + time.strftime("%Y-%m-%d %H:%M:%S") + ' +08:00\n')
         f.write('summary: \n')
         f.write('categories: jekyll\n')
         f.write('thumbnail: jekyll\n')

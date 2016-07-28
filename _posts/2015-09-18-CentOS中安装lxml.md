@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:		CentOS中安装lxml
-date:       2015-09-18 21:28:02
+date:       2015-09-18 21:28:02 +08:00
 summary:    CentOS中安装lxml
 categories: jekyll
 thumbnail: jekyll
@@ -19,7 +19,3 @@ yum install libxslt-devel libxml2-devel
 ```bash
 pip install lxml
 ```
-
-
-
-
