@@ -1,6 +1,14 @@
 [
   
   {
+    "title"    : "LeetCode Question 242",
+    "category" : "",
+    "tags"     : "LeetCode",
+    "url"      : "/jekyll/2016/07/28/LeetCode_242/",
+    "date"     : "2016-07-28 18:17:02 +0800"
+    } ,
+    
+  {
     "title"    : "Python下的深复制",
     "category" : "",
     "tags"     : "Python",

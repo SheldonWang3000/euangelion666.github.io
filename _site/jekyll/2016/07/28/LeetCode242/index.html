@@ -4,7 +4,7 @@
     <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>404</title>
+<title>LeetCode Question 242</title>
 <meta name="description" content="Coding Zone">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -70,54 +70,111 @@
 
     <div class="page-content">
       <div class="wrap">
-      <div class="container-fluid index error">
+      
+
+<div class="container-fluid single">
   <div class="row">
 
-    <div class="col-md-12 content-panel articles">
-      <h1 class="header author-header">404</h1>
+    <div itemscope itemtype="http://schema.org/Article" class="col-md-12 article">
+      
+      <div class="thumb">
+        <img itemprop="image" src="http://i.imgur.com/aRQcGSi.png" alt="Thumbnail: jekyll" />
+      </div>
+      
 
-      <div class="error-text">
-        Sorry but this page doesn't seem to exist.
+      <h1 class="header" itemprop="name">LeetCode Question 242</h1>
+
+      <div class="author">
+        <small><i>
+          
+          on <span itemprop="datePublished" content="2014-08-28">July 28, 2016</span>
+           under jekyll
+        </i></small>
       </div>
 
-      <div class="error-text">
-        <a href="/">Home</a> |
-        <a href="/posts/">All Posts</a> |
-        <a href="/search/">Search</a>
+      <div class="read-time">
+        <small>
+          1 minute read
+        </small>
       </div>
 
-      <p class="links">
-  <a href="http://www.twitter.com/WangSheldon" target="_new"><i class="fa fa-twitter"></i></a>
-  <a href="https://www.linkedin.com/pub/%E5%B0%91%E5%8D%8E-%E7%8E%8B/ab/165/b91" target="_new"><i class="fa fa-linkedin"></i></a>
-  
-  <a href="https://github.com/euangelion666" target="_new"><i class="fa fa-github-alt"></i></a>
-  <a href="http://stackoverflow.com/users/4510583/sheldon-wang?tab=profile" target="_new"><i class="fa fa-stack-overflow"></i></a>
-  <a href="/feed.xml" target="_new"><i class="fa fa-rss"></i></a>
-</p>
+      <div class="content-panel content">
 
+        
+
+        <span itemprop="articleBody"><p>题目：判断2个字符串是否互为字母移位之后的结果</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bool isAnagram(string s, string t)
+{
+	if (s.size() != t.size()) return false;
+	map&lt;char, int&gt; mapS, mapT;
+	for (auto i : s)
+	{
+		mapS[i] += 1;
+	}
+	for (auto i : t)
+	{
+		mapT[i] += 1;
+	}
+	if (mapS.size() != mapT.size()) return false;
+	vector&lt;pair&lt;char, int&gt;&gt; tmpS(mapS.begin(), mapS.end());
+	vector&lt;pair&lt;char, int&gt;&gt; tmpT(mapT.begin(), mapT.end());
+	sort(tmpS.begin(), tmpS.end());
+	sort(tmpT.begin(), tmpT.end());
+	auto iterS = mapS.begin();
+	auto iterT = mapT.begin();
+	while (iterS != mapS.end() &amp;&amp; iterT != mapT.end())
+	{
+		if (iterS-&gt;first != iterT-&gt;first) return false;
+		if (iterS-&gt;second != iterT-&gt;second) return false;
+		++iterS;
+		++iterT;
+	}
+	return true;
+}
+</code></pre>
+</div>
+
+<p>这是我一开始自己写的代码，还为了map的排序费了很大的功夫，然而，后来我发现可以改成下面这种……</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>bool isAnagram(string s, string t)
+{
+    sort(s.begin(), s.end());
+    sort(t.begin(), t.end());
+    return s == t;
+}
+</code></pre>
+</div>
+
+<p>记录一下，自己的傻……</p>
+</span>
+
+        
+
+        
+
+        
+        <div class="tags">
+          <small>
+          <i class="fa fa-tags"></i>
+            LeetCode
+          </small>
+        </div>
+        
+
+      </div>
+
+      
+
+      
 
     </div>
 
   </div>
 
-  <div class="content-panel related">
-    
-      <div class="related-header">
-        <a href="/jekyll/2016/07/28/LeetCode_242/">Suggested Article</a>
-      </div>
-      <div class="title">
-        <a href="/jekyll/2016/07/28/LeetCode_242/">LeetCode Question 242</a>
-      </div>
-      <div class="excerpt">
-         
-          LeetCode Question 242
-         
-        <a href="/jekyll/2016/07/28/LeetCode_242/">Continue Reading</a>
-      </div>
-    
-  </div>
-
 </div>
+
+
 
       </div>
     </div>
