@@ -60,7 +60,7 @@ a:hover {
 }
 
 ul {
-    list-style-type: none;
+	list-style-type: none;
 }
 
 .navbar, .nav {
@@ -86,10 +86,10 @@ ul {
 }
 
 .clearfix:after {
-   content: " ";
-   display: block;
-   height: 0;
-   clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+	clear: both;
 }
 
 .header {
@@ -284,10 +284,10 @@ ul {
 		font-size: 20px;
 
 		h2 {
-            text-align: center;
+			text-align: center;
 			margin-bottom: 30px;
 			color: $light-blue;
-			font-size: 26px;
+			font-size: 24px;
 		}
 
 		ul {
@@ -295,17 +295,17 @@ ul {
 			padding: 0px;
 
 			li {
-                text-align: left;
-                margin-left: 20px;
+				text-align: left;
+				margin-left: 20px;
 				margin-bottom: 20px;
-				font-size: 24px;
+				font-size: 22px;
 
 				a:hover {
 					color: $light-medium;
 				}
 
 				small {
-					font-size: 14px;
+					font-size: 12px;
 					margin-top: -10px;
 					padding-top: 0px;
 					color: $light-medium;
@@ -411,7 +411,7 @@ ul {
 
 	#search-input:focus {
 		border: none;
-  }
+	}
 
 	.content-panel {
 		padding-left: 10px;
@@ -564,23 +564,23 @@ ul {
 			img {
 				max-width: 100%;
 				padding: 10px;
-    		display: block;
-    		margin-left: auto;
-    		margin-right: auto
+				display: block;
+				margin-left: auto;
+				margin-right: auto
 			}
 
 			ul {
 				list-style-type: disc;
 			}
 
-            		ol {
+			ol {
 				list-style-type: decimal;
 			}
 
 			blockquote {
 				position: relative;
 				width: 100%;
-		    margin-left: -15px;
+				margin-left: -15px;
 				padding-right: 10px;
 				background-color: $darker;
 				color: white;
@@ -595,20 +595,20 @@ ul {
 				}
 
 				p {
-			    margin: 0;
-			    padding: 15px;
+					margin: 0;
+					padding: 15px;
 					z-index: 0;
 				}
 
 				:before {
-    			font-family: "Times New Roman";
+					font-family: "Times New Roman";
 					color: $light-medium;
-			    content: "“";
-			    position: absolute;
-			    top: 15px;
-			    left: 15px;
-			    font-size: 65px;
-			    font-weight: bold;
+					content: "“";
+					position: absolute;
+					top: 15px;
+					left: 15px;
+					font-size: 65px;
+					font-weight: bold;
 				}
 
 			}
@@ -618,8 +618,8 @@ ul {
 			}
 
 			.aligncenter {
-			    display: block;
-			    margin: 5px auto 5px auto;
+				display: block;
+				margin: 5px auto 5px auto;
 			}
 
 			figure.highlight, div.highlighter-rouge {
@@ -863,4 +863,21 @@ ul {
 			color: $white;
 		}
 	}
+}
+
+.post-tag {
+	display: inline-block;
+	padding: 0 .5rem;
+	margin-right: .5rem;
+	border-radius: 4px;
+	font-family: "PT Sans", Helvetica, Arial, sans-serif;
+	font-size: 90%;
+	&:before {
+		content: "\f02b";
+		font-family: FontAwesome;
+		padding-right: .5em;
+	}
+}
+.tags-expo-list {
+	margin-top: 20px;
 }
